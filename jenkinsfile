@@ -20,7 +20,7 @@ node(){
     }
 
     stage('Package Build') {
-        sh "tar -zcvf angular.tar.gz dist/nodejs/"
+        sh "tar -zcvf angular.tar.gz dist/angular/"
     }
 
     stage('Artifacts Creation') {
