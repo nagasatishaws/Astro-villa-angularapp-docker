@@ -20,7 +20,7 @@ node(){
     }
 
     stage('Package Build') {
-        sh "tar -zcvf angular.tar.gz dist/angulr/"
+        sh "tar -zcvf angular.tar.gz dist/angular/"
     }
 
     stage('Artifacts Creation') {
@@ -34,7 +34,7 @@ node(){
     }
 }
 
-node('node') {
+node('nodejs') {
     echo 'Unstash'
     unstash 'buildArtifacts'
     echo 'Artifacts copied'
