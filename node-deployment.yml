@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: astro-kuber
-        image: nagasatishdocker/astrovilla-kubernetes:v2
+        image: nagasatishdocker/astrovilla-kubernetes:${buildNumber}
         ports:
         - containerPort: 80
