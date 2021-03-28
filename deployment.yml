@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: astro-app-deployment
+  labels:
+    app: astro-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: astro-app
+  template:
+    metadata:
+      labels:
+        app: astro-app
+    spec:
+      containers:
+      - name: astro-app
+        image: nagasatishdocker/astrovilla-kubernetes:v1
+        ports:
+        - containerPort: 80
