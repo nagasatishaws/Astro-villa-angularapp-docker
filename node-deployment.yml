@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: astro-kuber-deployment
+  name: astro-kuber-deploymentee
   labels:
-    app: astro-kuber
+    app: astro-kuberer
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: astro-kuber
+      app: astro-kuberer
   template:
     metadata:
       labels:
-        app: astro-kuber
+        app: astro-kuberer
     spec:
       containers:
-      - name: astro-kuber
-        image: nagasatishdocker/astrovilla-kubernetes:${buildNumber}
+      - name: astro-kuberer
+        image: nagasatishdocker/astrovilla-kubernetes
         ports:
         - containerPort: 80
