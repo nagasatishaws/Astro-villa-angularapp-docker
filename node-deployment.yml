@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: astro-kuber-deploymentee
+  name: kubernetes-jenkins-astrovilla-app
   labels:
-    app: astro-kuberer
+    app: kubernetes-jenkins-astrovilla
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: astro-kuberer
+      app: kubernetes-jenkins-astrovilla
   template:
     metadata:
       labels:
-        app: astro-kuberer
+        app: kubernetes-jenkins-astrovilla
     spec:
       containers:
-      - name: astro-kuberer
-        image: nagasatishdocker/astrovilla-kubernetes
+      - name: kubernetes-jenkins-astrovilla
+        image: nagasatishdocker/kubernetes-jenkins-astrovilla
         ports:
         - containerPort: 80
