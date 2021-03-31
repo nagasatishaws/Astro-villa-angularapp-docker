@@ -1,16 +1,14 @@
-
 pipeline {
-   agent any
-   environment {
-       DOCKER_TAG = getDockerTag()
-  }
-  
-   stages {
-        stage("build docker image"){
-           steps{
-                  sh " docker build . -t nagasatish/kubee-docker-app:${DOCKER_TAG}"
-       }
- }
+    agent any
+    environment{
+        DOCKER_TAG = getDockerTag()
+    }
+    stages{
+        stage('Build Docker Image'){
+            steps{
+                sh "docker build . -t nagasatish/kubee-docker-ap:${DOCKER_TAG} "
+            }
+        }
         stage("Docker hub login"){
             steps{
              withCredentials([string(credentialsId: 'docker-password', variable: 'dockerhubPASS')]) {
