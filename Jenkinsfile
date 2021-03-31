@@ -6,7 +6,7 @@ pipeline {
   }
   
    stages {
-        stage(" build docker image){
+        stage("build docker image"){
            steps{
                   sh " docker build . -t nagasatish/kubee-docker-app:${DOCKER_TAG}"
        }
