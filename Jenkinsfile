@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage('Build Docker Image'){
             steps{
-                sh "docker build . -t nagasatish/kubee-docker-ap:${DOCKER_TAG} "
+                sh "docker build -t nagasatish/kubee-docker-ap:${DOCKER_TAG} ."
             }
         }
         stage("Docker hub login"){
