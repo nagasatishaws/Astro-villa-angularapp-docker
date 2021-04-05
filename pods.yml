@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: kubernetes-jenkins-astrovilla
-        image: nagasatishdocker/kubernetes-jenkins-astrovilla:tagVersion
+        image: minikube-kuber
         ports:
         - containerPort: 80
