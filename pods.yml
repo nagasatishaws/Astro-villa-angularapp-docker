@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: kubernetes-jenkins-astrovilla
-        image: minikube-kuber
+        image: 18.217.12.100:8020/kubernetes-mithun:1
         ports:
         - containerPort: 80
