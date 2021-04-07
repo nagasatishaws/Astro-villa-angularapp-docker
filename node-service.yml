@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     app: kubernetes-jenkins-astrovilla
-  type: NodePort
+  type: LoadBalancer
   ports:
   - protocol: TCP
     port: 6000
