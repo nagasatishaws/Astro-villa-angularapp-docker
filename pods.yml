@@ -5,7 +5,7 @@ metadata:
   labels:
     app: kubernetes-jenkins-astrovilla
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: kubernetes-jenkins-astrovilla
